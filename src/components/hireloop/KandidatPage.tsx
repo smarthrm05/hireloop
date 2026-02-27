@@ -161,7 +161,8 @@ export default function JobPostingPage() {
                     </span>
                   </div>
 
-                  <p className="text-base font-semibold text-gray-500 mt-5">
+                  {/* HIJAU TERANG */}
+                  <p className="text-base font-normal text-green-500 mt-5">
                     🕒 Tayang {selectedJob.posted_at} · Diperbarui{" "}
                     {selectedJob.updated_at}
                   </p>
@@ -216,6 +217,18 @@ export default function JobPostingPage() {
                     </span>
                   ))}
                 </div>
+              </section>
+
+              {/* KUALIFIKASI */}
+              <section>
+                <h4 className="font-semibold mb-4 text-xl">
+                  Kualifikasi
+                </h4>
+                <ul className="list-disc pl-6 space-y-3">
+                  {selectedJob.requirements.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
               </section>
 
               <section>
